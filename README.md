@@ -43,7 +43,7 @@
 
 #### 📋 타입 목록
 
-| type                  | 설명                                  |
+| type                  | subject                               |
 | :-------------------- | :------------------------------------ |
 | `start`               | 새로운 프로젝트를 시작할 때           |
 | `feat`                | 새로운 기능을 추가할 때               |
@@ -63,6 +63,6 @@
 #### ✨ 예시
 
 ```bash
-feat: Implement social login API
-fix: Resolve Null Pointer Exception when querying User
-refactor: Improve logic in AuthService
+feat: 소셜 로그인 API 구현
+fix: User 조회 시 Null Pointer Exception 해결
+refactor: AuthService 로직 개선
