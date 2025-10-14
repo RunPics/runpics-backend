@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: "runpics"
+
+  # ===============================
+  # DATABASE CONNECTION
+  # ===============================
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PW}
+
+  # ===============================
+  # JPA & HIBERNATE SETTINGS
+  # ===============================
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update # ??? ??. ?? ?????? validate ?? none ??
+    properties:
+      hibernate:
+        format_sql: true # SQL ??? ?? ?? ???
