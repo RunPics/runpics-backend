@@ -17,7 +17,7 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update # ??? ??. ?? ?????? validate ?? none ??
+      ddl-auto: update # 개발용 설정. 실제 서비스에서는 validate 또는 none 권장
     properties:
       hibernate:
-        format_sql: true # SQL ??? ?? ?? ???
+        format_sql: true # SQL 로그를 보기 좋게 포맷팅
