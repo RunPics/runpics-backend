@@ -7,7 +7,7 @@ spring:
   # ===============================
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${DB_URL}
+    url: ${DB_URL}&allowPublicKeyRetrieval=true
     username: ${DB_USER}
     password: ${DB_PW}
 
