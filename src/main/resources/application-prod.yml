@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: "runpics"
+
+  # ===============================
+  # DATABASE CONNECTION
+  # ===============================
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}&allowPublicKeyRetrieval=true
+    username: ${DB_USER}
+    password: ${DB_PW}
+
+  # ===============================
+  # JPA & HIBERNATE SETTINGS
+  # ===============================
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update # 개발용 설정. 실제 서비스에서는 validate 또는 none 권장
+    properties:
+      hibernate:
+        format_sql: true # SQL 로그를 보기 좋게 포맷팅
+
+  # ===============================
+  # OAUTH2 CLIENT SETTINGS
+  # ===============================
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID} # 구글 클라이언트 ID
+            client-secret: ${GOOGLE_CLIENT_SECRET} # 구글 클라이언트 시크릿
+            scope:
+              - profile
+              - email
+
+  # ===============================
+  # JWT SETTINGS
+  # ===============================
+  jwt:
+    secretKey: ${JWT_SECRET_KEY} # JWT 서명에 사용할 비밀키 (매우 중요)
+    access:
+      expiration: 86400000 # 액세스 토큰 만료 시간 (24시간, 밀리초 단위)
+    refresh:
+      expiration: 604800000 # 리프레시 토큰 만료 시간 (7일, 밀리초 단위)
