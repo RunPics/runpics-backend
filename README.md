@@ -4,8 +4,8 @@
 
 ## 🛠️ 기술 스택 (Tech Stack)
 
--   **Language**: Java 17
--   **Framework**: Spring Boot 3.x
+-   **Language**: Java 21
+-   **Framework**: Spring Boot 3.5.5
 -   **Database**: MySQL
 -   **ORM**: Spring Data JPA / Hibernate
 -   **Build Tool**: Gradle
