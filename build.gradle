@@ -37,8 +37,23 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.3'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.3'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+
+bootRun {
+    environment = [
+            'DB_URL': System.getenv('DB_URL'),
+            'DB_USER': System.getenv('DB_USER'),
+            'DB_PW': System.getenv('DB_PW'),
+            'GOOGLE_CLIENT_ID': System.getenv('GOOGLE_CLIENT_ID'),
+            'GOOGLE_CLIENT_SECRET': System.getenv('GOOGLE_CLIENT_SECRET'),
+            'JWT_SECRET_KEY': System.getenv('JWT_SECRET_KEY')
+    ]
 }
